@@ -1,0 +1,85 @@
+<style>
+  .search-in{
+    border-radius: 25px;
+    padding : 0.5rem 3rem 0.5rem 3rem;
+    font-size:1rem;
+  }
+  .btn-search{
+    background-color: #fe424d;
+    color:white;
+    border-radius:25px;
+    padding: 0 1rem 0 1rem; 
+  }
+  .btn-search:hover{
+    background-color: #fe424d;
+    color:white;
+  }
+  .fa-solid{
+    color:grey;
+  }
+  .btn-search i{
+    font-size: 1rem;
+    margin-right:0.3rem;
+    color:white;
+    display:inline;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings">Explore</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <form class="d-flex " role="search">
+        <input class="form-control me-2 search-in" type="search" placeholder="Search Destination"/>
+        <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass" color="white"></i>Search</button>
+      </form>
+    </div>
+    <div class="margin-auto">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="filterDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+            <h5>Price :</h5>
+            <li><a class="dropdown-item" href="/listings/price/1500">1500</a></li>
+            <li><a class="dropdown-item" href="/listings/price/3000">3000</a></li>
+            <li><a class="dropdown-item" href="/listings/price/5000">5000</a></li>
+            <li><a class="dropdown-item" href="/listings/price/8000">8000</a></li>
+            <li><a class="dropdown-item" href="/listings/price/10000">10000</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/listings">Show All</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">WanderLust your home</a>
+        </li> 
+        <% if(!currUser){ %>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/signup"><b>Sign Up</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login"><b>Log In</b></a>
+          </li>
+        <% } %>
+        <% if(currUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout"><b>Log Out</b></a>
+          </li> 
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
