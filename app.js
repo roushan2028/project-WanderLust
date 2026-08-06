@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV != "Production"){
+if(process.env.NODE_ENV !== "production"){
     require('dotenv').config();
 }
 // console.log(process.env.SECRET); 
@@ -48,7 +48,7 @@ const store = MongoStore.create({
     touchAfter : 24*3600,
 });
 
-store.on("error",()=>{
+store.on("error",(err)=>{
     console.log("error in mongo session store",err);
 })
 
@@ -143,9 +143,11 @@ app.use((err,req,res,next)=>{
 //     res.render('index.ejs',{});
 // })
 
-app.listen(8080,()=>{
-    console.log("server is listening to the port 8080");
-})
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
 
 
 
