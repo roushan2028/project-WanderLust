@@ -110,12 +110,14 @@ module.exports.renderAlisting = async (req, res) => {
 };
 
 module.exports.searchListings = async (req,res)=>{
-    let {query} =req.params;
+    let {q: query} = req.query;
+    if(!query){
+        req.flash("error","Please enter a search query");
+        return res.redirect("/listings");
+    }
     let list = await Listing.find({title: { $regex: query, $options: 'i'}});
-    if(!list){
-        rea.flash("error","Listing you want to find does not exist");
-        res.redirect("/listings");
+    if(list.length === 0){
+        req.flash("info","No listings found matching your search");
     }
     res.render("listings/index.ejs",{allListings:list});
-    res.redirect("/listings");
 }

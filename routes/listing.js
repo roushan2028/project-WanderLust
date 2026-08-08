@@ -42,6 +42,6 @@ router.get("/:id/edit",isLogIn,isOwner,wrapAsync(listingController.renderEditFor
 
 router.get("/price/:pr",wrapAsync(listingController.renderPriceFilter));
 
-router.get("/search/:query",wrapAsync(listingController.searchListings));
+router.get("/search",wrapAsync(listingController.searchListings));
 
 module.exports = router;
