@@ -27,24 +27,25 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i> </a>
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+    
+    <!-- Search Form - Always Visible -->
+    <form class="d-flex search-form-navbar" role="search">
+      <input class="form-control me-2 search-in" type="search" placeholder="Search Destination"/>
+      <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass" color="white"></i>Search</button>
+    </form>
+    
+    <!-- Hamburger Toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
+    <!-- Collapsible Menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" href="/listings">Explore</a>
         </li>
-      </ul>
-      
-      <form class="d-flex flex-wrap mb-2 mb-md-0 search-form" role="search">
-        <input class="form-control me-2 search-in" type="search" placeholder="Search Destination"/>
-        <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass" color="white"></i>Search</button>
-      </form>
-      
-      <ul class="navbar-nav ms-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="filterDropdown"
             role="button" data-bs-toggle="dropdown" aria-expanded="false">
