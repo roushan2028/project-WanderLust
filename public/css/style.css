@@ -124,3 +124,90 @@ body{
     height:400px;
     width: 80vh;
  }
+
+/* Responsive Navbar */
+@media (max-width: 767.98px) {
+  .navbar {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .search-form {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .search-form .search-in {
+    flex: 1;
+    min-width: 150px;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem;
+  }
+
+  .search-form .btn-search {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .search-form .btn-search i {
+    margin-right: 0.2rem;
+  }
+
+  .navbar-nav {
+    padding-top: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.95rem;
+  }
+
+  .dropdown-menu {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .search-in {
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.85rem;
+  }
+
+  .btn-search {
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.8rem;
+  }
+
+  .btn-search i {
+    font-size: 0.85rem;
+    margin-right: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0.35rem 0.5rem !important;
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand {
+    margin-right: 0.5rem;
+  }
+
+  .fa-solid {
+    font-size: 1.2rem;
+  }
+
+  .search-form {
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  .search-form .search-in {
+    min-width: 100px;
+  }
+}
